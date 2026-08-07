@@ -4,446 +4,316 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ノルモダ・ドレイ — 言語学者</title>
-<meta name="description" content="ノルモダ・ドレイ（Normoda Doley）は、インド北東部の消滅危機言語ミシン語（チベット・ビルマ語派）の記述・記録を専門とする言語学者。ジャワハルラール・ネルー大学 博士（言語学）。">
+<meta name="description" content="Normoda Doley is a linguist specializing in the documentation of Mising, an endangered Tibeto-Burman language of Northeast India. PhD, Jawaharlal Nehru University.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=Noto+Serif+JP:wght@500;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --paper:#FAF7F0;
-  --ink:#1C1A17;
-  --maroon:#7A1F2B;
-  --maroon-dark:#5E1620;
-  --slate:#33566B;
-  --gold:#C9942A;
-  --line:#E2DBCC;
-  --faint:#6E675C;
+  --paper:#FAF7F0; --ink:#1C1A17; --maroon:#7A1F2B; --maroon-dark:#5E1620;
+  --slate:#33566B; --gold:#C9942A; --line:#E2DBCC; --faint:#6E675C;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){
-  html{scroll-behavior:auto}
-  *,*::before,*::after{animation:none!important;transition:none!important}
-}
-body{
-  background:var(--paper);
-  color:var(--ink);
-  font-family:'Alegreya Sans','Noto Sans JP',system-ui,sans-serif;
-  font-size:1.05rem;
-  line-height:1.65;
-}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*,*::before,*::after{animation:none!important;transition:none!important}}
+body{background:var(--paper);color:var(--ink);font-family:'Alegreya Sans','Noto Sans JP',system-ui,sans-serif;font-size:1.05rem;line-height:1.6}
 a{color:var(--maroon);text-decoration:none;border-bottom:1px solid rgba(122,31,43,.35)}
 a:hover{border-bottom-color:var(--maroon)}
-a:focus-visible, button:focus-visible{outline:2px solid var(--slate);outline-offset:3px;border-radius:2px}
-.wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+a:focus-visible{outline:2px solid var(--slate);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.mono{font-family:'IBM Plex Mono',monospace}
 
-/* ── Nav ── */
-nav{
-  position:sticky;top:0;z-index:20;
-  background:rgba(250,247,240,.92);backdrop-filter:blur(6px);
-  border-bottom:1px solid var(--line);
-}
-.nav-in{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
-.mark{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-weight:700;font-size:1.25rem;letter-spacing:.02em;border:none;color:var(--ink)}
-.mark span{color:var(--maroon)}
-.nav-links{display:flex;gap:26px;font-size:.92rem}
-.nav-links a{border:none;color:var(--ink);letter-spacing:.03em}
-.nav-links a:hover{color:var(--maroon)}
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:30;background:linear-gradient(rgba(28,26,23,.55),transparent);padding:18px 0;transition:background .3s}
+nav.scrolled{background:rgba(250,247,240,.94);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;justify-content:space-between;align-items:center}
+.mark{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-weight:700;font-size:1.3rem;color:#fff;border:none}
+nav.scrolled .mark{color:var(--ink)}
+.nav-links{display:flex;gap:24px;font-size:.9rem}
+.nav-links a{border:none;color:#fff;letter-spacing:.04em}
+nav.scrolled .nav-links a{color:var(--ink)}
+.nav-links a:hover{color:var(--gold)}
 @media(max-width:720px){.nav-links{display:none}}
 
-/* ── Hero ── */
-header{padding:72px 0 56px}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
-@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:40px}}
-.eyebrow{
-  font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--slate);display:flex;align-items:center;gap:10px;margin-bottom:18px;
-}
-.eyebrow::before{content:"";width:22px;height:2px;background:var(--maroon)}
-h1{
-  font-family:'Cormorant Garamond','Noto Serif JP',serif;font-weight:600;
-  font-size:clamp(2.6rem,5.6vw,4.1rem);line-height:1.04;letter-spacing:-.01em;margin-bottom:20px;
-}
-.thesis{font-size:1.18rem;max-width:34em;color:#3A362F;margin-bottom:30px}
-.thesis em{font-style:italic;color:var(--maroon)}
-.cta-row{display:flex;gap:14px;flex-wrap:wrap}
-.btn{
-  display:inline-block;padding:11px 22px;border:1.5px solid var(--maroon);
-  font-size:.95rem;font-weight:500;letter-spacing:.02em;border-radius:2px;
-}
-.btn.solid{background:var(--maroon);color:var(--paper)}
-.btn.solid:hover{background:var(--maroon-dark)}
-.btn.ghost{color:var(--maroon)}
-.btn.ghost:hover{background:rgba(122,31,43,.06)}
+/* image slot placeholder styling: replaced automatically when real image loads */
+.imgbox{position:relative;background:
+  repeating-linear-gradient(45deg,#EFE9DC 0 14px,#E7E0D0 14px 28px)}
+.imgbox .slotlabel{
+  position:absolute;inset:0;display:flex;flex-direction:column;gap:6px;
+  align-items:center;justify-content:center;text-align:center;padding:16px;
+  font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--faint);z-index:0}
+.imgbox img{position:relative;z-index:1}
+.imgbox img[data-missing]{display:none}
 
-/* gloss card — the fieldnote */
-.gloss-card{
-  background:#FFFDF8;border:1px solid var(--line);border-radius:3px;
-  padding:26px 26px 20px;position:relative;
-  box-shadow:0 8px 28px rgba(28,26,23,.07);
-}
-.gloss-card::before{
-  content:"";position:absolute;left:0;top:0;bottom:0;width:4px;background:var(--maroon);border-radius:3px 0 0 3px;
-}
-.gloss-label{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:14px}
-.gloss-line{font-family:'IBM Plex Mono',monospace;font-size:.95rem;line-height:1.5}
-.gloss-line.src{font-weight:500;color:var(--ink)}
+/* hero */
+.hero{position:relative;height:auto;aspect-ratio:16/9;min-height:440px;max-height:none;color:#fff}
+.hero .imgbox{position:absolute;inset:0}
+.hero::after{content:"";position:absolute;inset:0;z-index:2;
+  background:linear-gradient(to top,rgba(28,26,23,.82) 0%,rgba(28,26,23,.25) 55%,rgba(28,26,23,.35) 100%)}
+.hero-content{position:absolute;z-index:3;left:0;right:0;bottom:9vh}
+.eyebrow{font-family:'IBM Plex Mono',monospace;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;display:flex;align-items:center;gap:10px;margin-bottom:14px;color:var(--gold)}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--gold)}
+h1{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-weight:600;font-size:clamp(3rem,7.5vw,5.4rem);line-height:1;letter-spacing:-.01em}
+.hero p.tag{margin-top:14px;font-size:1.15rem;max-width:30em;color:#EDE7DA}
+.hero .cta-row{margin-top:26px;display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-block;padding:11px 22px;border:1.5px solid var(--gold);color:#fff;font-size:.95rem;border-radius:2px}
+.btn.solid{background:var(--gold);color:var(--ink);font-weight:700}
+.btn:hover{background:#fff;border-color:#fff;color:var(--ink)}
+
+/* woven band */
+.band{display:block;width:100%;height:24px}
+
+/* stat strip */
+.stats{background:var(--ink);color:var(--paper);padding:34px 0}
+.stats .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;text-align:center}
+@media(max-width:720px){.stats .wrap{grid-template-columns:repeat(2,1fr)}}
+.stats b{display:block;font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:2.4rem;color:var(--gold);line-height:1.1}
+.stats span{font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;color:#B7B0A4}
+
+/* research: image cards */
+section{padding:76px 0}
+.sec-head{margin-bottom:34px;display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap}
+h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-weight:600;font-size:2.1rem}
+.sec-head .mono{font-size:.75rem;color:var(--faint);letter-spacing:.12em;text-transform:uppercase}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+@media(max-width:820px){.cards{grid-template-columns:1fr}}
+.card{position:relative;border-radius:3px;overflow:hidden;aspect-ratio:4/5}
+.card .imgbox{position:absolute;inset:0}
+.card .imgbox.fit img{object-fit:contain;background:#1C1A17}
+.card .imgbox.fit{background:#1C1A17}
+.card::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(to top,rgba(28,26,23,.78) 0%,transparent 55%)}
+.card .cap{position:absolute;z-index:3;left:18px;right:18px;bottom:16px;color:#fff}
+.card .cap small{display:block;font-family:'IBM Plex Mono',monospace;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:5px}
+.card .cap h3{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:1.4rem;font-weight:700;line-height:1.2}
+
+/* gloss strip */
+.gloss{background:#FFFDF8;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.gloss .wrap{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+@media(max-width:820px){.gloss .wrap{grid-template-columns:1fr}}
+.gloss-line{font-family:'IBM Plex Mono',monospace;font-size:1rem;line-height:1.6}
 .gloss-line.morph{color:var(--slate);font-size:.85rem}
-.gloss-line.trans{font-family:'Alegreya Sans',sans-serif;font-style:italic;margin-top:10px;color:#3A362F}
-.gloss-note{margin-top:16px;font-size:.82rem;color:var(--faint)}
+.gloss-line.trans{font-family:'Alegreya Sans',sans-serif;font-style:italic;margin-top:10px}
+.gloss aside{border-left:3px solid var(--maroon);padding-left:22px;font-size:1.05rem;color:#3A362F}
 
-/* woven band — gadu-inspired */
-.band{display:block;width:100%;height:26px}
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
+@media(max-width:820px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+.g1{grid-column:span 2;grid-row:span 2}
+.gallery .imgbox{border-radius:3px;overflow:hidden}
 
-/* ── Sections ── */
-section{padding:64px 0}
-.sec-head{margin-bottom:36px}
-h2{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-weight:600;font-size:2rem;margin-top:6px}
-.two-col{display:grid;grid-template-columns:1.4fr .8fr;gap:52px}
-@media(max-width:820px){.two-col{grid-template-columns:1fr;gap:32px}}
-.about-text p+p{margin-top:16px}
-.facts{border-top:2px solid var(--maroon);padding-top:18px}
-.facts dt{font-family:'IBM Plex Mono',monospace;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-top:16px}
-.facts dd{margin-top:3px}
-.facts dt:first-child{margin-top:0}
-
-/* research strands */
-.strand{
-  display:grid;grid-template-columns:220px 1fr;gap:34px;
-  padding:30px 0;border-top:1px solid var(--line);
-}
-.strand:last-child{border-bottom:1px solid var(--line)}
-@media(max-width:720px){.strand{grid-template-columns:1fr;gap:10px}}
-.strand h3{font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:1.35rem;font-weight:700;line-height:1.25}
-.strand h3 small{display:block;font-family:'IBM Plex Mono',monospace;font-size:.7rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-.strand p{color:#3A362F}
-
-/* publications */
-.pub{padding:20px 0;border-top:1px solid var(--line)}
-.pub:last-child{border-bottom:1px solid var(--line)}
-.pub .yr{font-family:'IBM Plex Mono',monospace;font-size:.8rem;color:var(--slate)}
-.pub .ti{font-weight:700}
-.pub .venue{font-style:italic;color:#3A362F}
-.placeholder{
-  background:rgba(201,148,42,.08);border:1px dashed var(--gold);border-radius:3px;
-  padding:16px 18px;margin-top:20px;font-size:.92rem;color:#6b5a2e;
-}
-
-/* teaching & fieldwork */
-.tf-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px}
-@media(max-width:720px){.tf-grid{grid-template-columns:1fr}}
-.tf-grid ul{list-style:none}
-.tf-grid li{padding:10px 0 10px 20px;border-left:2px solid var(--line);position:relative}
-.tf-grid li::before{content:"";position:absolute;left:-5px;top:18px;width:8px;height:8px;background:var(--maroon);border-radius:50%}
-.tf-grid li small{display:block;color:var(--faint);font-size:.85rem}
+/* compact records */
+.records details{border-top:1px solid var(--line)}
+.records details:last-child{border-bottom:1px solid var(--line)}
+.records summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:20px 4px;font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:1.4rem;font-weight:700}
+.records summary::after{content:"+";font-family:'IBM Plex Mono',monospace;font-size:1.2rem;color:var(--maroon)}
+.records details[open] summary::after{content:"−"}
+.records .item{padding:10px 4px 16px;border-top:1px dashed var(--line)}
+.records .item .yr{font-family:'IBM Plex Mono',monospace;font-size:.78rem;color:var(--slate)}
+.records .item p.t{font-weight:700}
+.records .item p.v{font-style:italic;color:#57524A;font-size:.95rem}
 
 /* footer */
-footer{background:var(--ink);color:#D8D2C6;padding:56px 0 40px;margin-top:40px}
-footer h2{color:var(--paper)}
+footer{background:var(--ink);color:#D8D2C6;padding:64px 0 40px}
+footer h2{color:var(--paper);font-size:2.4rem}
+footer .mono{color:var(--gold)}
 footer a{color:var(--gold);border-bottom-color:rgba(201,148,42,.4)}
-.foot-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:44px}
-@media(max-width:720px){.foot-grid{grid-template-columns:1fr}}
-.foot-meta{margin-top:44px;padding-top:20px;border-top:1px solid rgba(216,210,198,.2);font-size:.85rem;color:#9B948A;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.foot-meta{margin-top:48px;padding-top:20px;border-top:1px solid rgba(216,210,198,.2);font-size:.85rem;color:#9B948A;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </style>
 </head>
 <body>
 
-<nav>
+<nav id="nav">
   <div class="wrap nav-in">
-    <a class="mark" href="#top">Normoda <span>Doley</span></a>
+    <a class="mark" href="#top">Normoda Doley</a>
     <div class="nav-links">
-      <a href="#about">プロフィール</a>
       <a href="#research">研究</a>
-      <a href="#publications">業績</a>
-      <a href="#presentations">学会発表</a>
-      <a href="#awards">受賞・助成</a>
-      <a href="#teaching">教育・フィールドワーク</a>
-      <a href="#contact">連絡先</a> <a href="index.html" style="color:var(--maroon);font-weight:700">EN</a>
+      <a href="#field">フィールド</a>
+      <a href="#records">業績</a>
+      <a href="#contact">連絡先</a>
+      <a href="index.html" style="font-weight:700">EN</a>
     </div>
   </div>
 </nav>
 
-<header id="top">
-  <div class="wrap hero-grid">
-    <div>
-      <p class="eyebrow">言語学者 · インド北東部の消滅危機言語</p>
-      <h1>ノルモダ・ドレイ<br><span style="font-size:.45em;letter-spacing:.04em;color:var(--faint)">Normoda Doley</span></h1>
-      <p class="thesis">ブラマプトラ渓谷で話される消滅危機言語<em>ミシン語</em>（チベット・ビルマ語派）を、言語学者として、そして母語話者として記述・記録しています。研究は文法記述、表現語（エクスプレッシブ）と類像性の類型論、AIを介した異文化理解教育に及びます。</p>
+<!-- HERO — upload your main photo as  images/hero.jpg  (landscape, ≥1600px wide) -->
+<div class="hero" id="top">
+  <div class="imgbox">
+    <div class="slotlabel"><strong>images/hero.jpg</strong></div>
+    <img src="images/hero.jpg" alt="A bridge across the river against misty foothills, on the way to Dhemaji" onerror="this.setAttribute('data-missing','')">
+  </div>
+  <div class="hero-content">
+    <div class="wrap">
+      <p class="eyebrow">言語学者 · AIと異文化理解 · 母語話者 · ミシン語</p>
+      <h1>ノルモダ・ドレイ</h1>
+      <p class="tag">ブラマプトラ渓谷の消滅危機言語を、その内側から記録する。そしてAIによる異文化理解教育を探究する。</p>
       <div class="cta-row">
         <a class="btn solid" href="mailto:normod13_llh@jnu.ac.in">お問い合わせ</a>
-        <a class="btn ghost" href="#">履歴書（CV）</a>
+        <a class="btn" href="#records">業績</a>
       </div>
     </div>
-    <aside class="gloss-card" aria-label="Example from fieldnotes">
-      <p class="gloss-label">フィールドノートより · アッサム州デマジ県</p>
-      <p class="gloss-line src">[ミシン語の例文をここに]</p>
-      <p class="gloss-line morph">[形態素グロス]</p>
-      <p class="gloss-line trans">「[自由訳]」</p>
-      <p class="gloss-note">パグロ・ミシン語 · 東タニ語群 · チベット・ビルマ語派</p>
-    </aside>
   </div>
-</header>
+</div>
 
-<!-- Gadu-inspired woven band -->
 <svg class="band" role="presentation" aria-hidden="true" preserveAspectRatio="none" viewBox="0 0 1200 26">
   <rect width="1200" height="26" fill="#7A1F2B"/>
-  <g fill="#FAF7F0" opacity=".9">
-    <path d="M0 13 L13 2 L26 13 L13 24 Z" id="d"/>
-  </g>
-  <g fill="#C9942A">
-    <use href="#d" x="26"/><use href="#d" x="78"/><use href="#d" x="130"/><use href="#d" x="182"/><use href="#d" x="234"/><use href="#d" x="286"/><use href="#d" x="338"/><use href="#d" x="390"/><use href="#d" x="442"/><use href="#d" x="494"/><use href="#d" x="546"/><use href="#d" x="598"/><use href="#d" x="650"/><use href="#d" x="702"/><use href="#d" x="754"/><use href="#d" x="806"/><use href="#d" x="858"/><use href="#d" x="910"/><use href="#d" x="962"/><use href="#d" x="1014"/><use href="#d" x="1066"/><use href="#d" x="1118"/><use href="#d" x="1170"/>
-  </g>
-  <g fill="#FAF7F0">
-    <use href="#d" x="52"/><use href="#d" x="104"/><use href="#d" x="156"/><use href="#d" x="208"/><use href="#d" x="260"/><use href="#d" x="312"/><use href="#d" x="364"/><use href="#d" x="416"/><use href="#d" x="468"/><use href="#d" x="520"/><use href="#d" x="572"/><use href="#d" x="624"/><use href="#d" x="676"/><use href="#d" x="728"/><use href="#d" x="780"/><use href="#d" x="832"/><use href="#d" x="884"/><use href="#d" x="936"/><use href="#d" x="988"/><use href="#d" x="1040"/><use href="#d" x="1092"/><use href="#d" x="1144"/><use href="#d" x="1196"/>
-  </g>
+  <g><path d="M0 13 L13 2 L26 13 L13 24 Z" id="d" fill="#FAF7F0"/></g>
+  <g fill="#C9942A"><use href="#d" x="26"/><use href="#d" x="78"/><use href="#d" x="130"/><use href="#d" x="182"/><use href="#d" x="234"/><use href="#d" x="286"/><use href="#d" x="338"/><use href="#d" x="390"/><use href="#d" x="442"/><use href="#d" x="494"/><use href="#d" x="546"/><use href="#d" x="598"/><use href="#d" x="650"/><use href="#d" x="702"/><use href="#d" x="754"/><use href="#d" x="806"/><use href="#d" x="858"/><use href="#d" x="910"/><use href="#d" x="962"/><use href="#d" x="1014"/><use href="#d" x="1066"/><use href="#d" x="1118"/><use href="#d" x="1170"/></g>
+  <g fill="#FAF7F0"><use href="#d" x="52"/><use href="#d" x="104"/><use href="#d" x="156"/><use href="#d" x="208"/><use href="#d" x="260"/><use href="#d" x="312"/><use href="#d" x="364"/><use href="#d" x="416"/><use href="#d" x="468"/><use href="#d" x="520"/><use href="#d" x="572"/><use href="#d" x="624"/><use href="#d" x="676"/><use href="#d" x="728"/><use href="#d" x="780"/><use href="#d" x="832"/><use href="#d" x="884"/><use href="#d" x="936"/><use href="#d" x="988"/><use href="#d" x="1040"/><use href="#d" x="1092"/><use href="#d" x="1144"/><use href="#d" x="1196"/></g>
 </svg>
 
-<section id="about">
+<div class="stats">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">プロフィール</p>
-      <h2>言語の内側から書かれた文法</h2>
+    <div><b>12</b><span>論文・出版物</span></div>
+    <div><b>9</b><span>学会発表</span></div>
+    <div><b>5</b><span>受賞・助成</span></div>
+    <div><b>博士</b><span>JNU · 2026年審査合格</span></div>
+  </div>
+</div>
+
+<!-- PORTRAIT strip -->
+<div style="padding:56px 0;border-bottom:1px solid var(--line)">
+  <div class="wrap" style="display:flex;gap:36px;align-items:center;flex-wrap:wrap">
+    <div style="width:168px;height:168px;border-radius:50%;overflow:hidden;flex-shrink:0;border:4px solid var(--maroon);box-shadow:0 10px 30px rgba(28,26,23,.15)">
+      <img src="images/portrait.jpg" alt="Portrait of Normoda Doley" style="object-position:top">
     </div>
-    <div class="two-col">
-      <div class="about-text">
-        <p>ニューデリーのジャワハルラール・ネルー大学（JNU）にて言語学の博士号を取得しました。博士論文<em> A Grammar of the Pagro Variety of Mising </em>は、私自身が母語として育ったパグロ変種の包括的な文法記述です。ミシン語はチベット・ビルマ語派・東タニ語群に属し、アッサム州およびアルナーチャル・プラデーシュ州のブラマプトラ川流域に暮らす川辺の共同体で話されています。</p>
-        <p>研究の関心は、消滅危機言語の記録・記述、言語類型論（特に表現語・オノマトペ・類像性）、そしてバーチャル交流やAIを介した言語学習を含む応用的異文化理解教育の交差点にあります。博士研究のフィールドワークはアッサム州デマジ県で実施しました。</p>
-        <p>母語話者の言語学者として、学術的記録とミシン語共同体の双方に資する言語記録を目指しています。</p>
-      </div>
-      <dl class="facts">
-        <dt>博士（言語学）</dt><dd>ジャワハルラール・ネルー大学、2021–2026年（審査合格）<br><em>A Grammar of the Pagro Variety of Mising</em></dd>
-        <dt>修士（言語学）</dt><dd>ジャワハルラール・ネルー大学、2019–2021年</dd>
-        <dt>専門</dt><dd>ミシン語（東タニ語群・チベット・ビルマ語派）</dd>
-        <dt>フィールドワーク</dt><dd>インド・アッサム州デマジ県</dd>
-        <dt>研究者ID</dt><dd><a href="https://orcid.org/0009-0003-3425-2775">ORCID 0009-0003-3425-2775</a><br>Scopus ID 60396776200</dd>
-      </dl>
+    <div style="flex:1;min-width:260px">
+      <p style="font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:1.6rem;font-weight:600;line-height:1.3">ミシン語の母語話者として、インド北東部の消滅危機言語を研究しています。現在は、AIを活用した異文化理解教育と言語学習の可能性を探究しています。</p>
+      <p style="margin-top:8px;color:#57524A">博士（言語学）ジャワハルラール・ネルー大学</p>
+      <p class="mono" style="font-size:.8rem;color:var(--faint);margin-top:10px;letter-spacing:.06em"><a href="https://orcid.org/0009-0003-3425-2775">ORCID</a> &nbsp;&middot;&nbsp; <a href="https://www.scopus.com/authid/detail.uri?authorId=60396776200">Scopus</a> &nbsp;&middot;&nbsp; <a href="mailto:normod13_llh@jnu.ac.in">normod13_llh@jnu.ac.in</a></p>
     </div>
   </div>
-</section>
+</div>
 
+<!-- RESEARCH — three image cards: images/research-1.jpg, -2.jpg, -3.jpg (portrait, ≥800px wide) -->
 <section id="research">
   <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">研究</p>
-      <h2>三つの柱</h2>
-    </div>
-    <div class="strand">
-      <h3><small>柱 · 言語記録</small>ミシン語の文法と記述</h3>
-      <p>継続的なフィールドワークと母語話者としての知識に基づく、パグロ・ミシン語の音韻論・形態統語論・テキスト記録を含む包括的な文法記述。現在、博士論文の文法書を単著として刊行する準備を進めています。</p>
-    </div>
-    <div class="strand">
-      <h3><small>柱 · 類型論</small>表現語・類像性・語彙</h3>
-      <p>音と構造が恣意的記号を超えて意味を担う仕組み — ミシン語の表現語とオノマトペ、統語的類像性、そしてタニ諸語が描写的言語の通言語的類型論にもたらす知見を探究しています。</p>
-    </div>
-    <div class="strand">
-      <h3><small>柱 · 教育</small>AIを介した異文化学習</h3>
-      <p>バーチャル異文化交流とAI支援型言語教育に関する共同研究。京都大学の研究者らとともに、文化的概念のイーミックな理解をめぐるプロジェクトを進行中です。</p>
-    </div>
-  </div>
-</section>
-
-<section id="publications">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">業績</p>
-      <h2>論文・出版物</h2>
-    </div>
-    <div class="pub">
-      <span class="yr">2026</span>
-      <p class="ti">Exploring prefix diversity: A comparative analysis of the Tani languages, emphasizing usage in nominal categorial prefixes</p>
-      <p class="venue">Himalayan Linguistics, 25(2). <a href="https://doi.org/10.5070/H9.35586">https://doi.org/10.5070/H9.35586</a></p>
-    </div>
-    <div class="pub">
-      <span class="yr">2026</span>
-      <p class="ti">Language shift and endangerment of Mising, a Tani language in Northeast India <span style="font-weight:400">(with A. Mittal)</span></p>
-      <p class="venue">Journal of the Southeast Asian Linguistic Society, University of Hawai&#8217;i Press. Scopus-indexed</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2026</span>
-      <p class="ti">The global and the local: Investigating sociolinguistic motivations for code-switching on Instagram in India and Vietnam <span style="font-weight:400">(with T. M. T. Vu)</span></p>
-      <p class="venue">The International Journal of Communication and Linguistic Studies, Common Ground Research Networks. Scopus-indexed</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2026</span>
-      <p class="ti">Case marking in Mising</p>
-      <p class="venue">Vaak Manthan, Society for Endangered and Lesser-Known Languages (SEL), 11(1), 168&#8211;176</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2025</span>
-      <p class="ti">Ambiguity in online newspaper headlines: A cross-cultural analysis of Vietnam and India <span style="font-weight:400">(T. M. T. Vu &amp; N. Doley)</span></p>
-      <p class="venue">The International Journal of Communication and Linguistic Studies, 23(4), 147&#8211;168. <a href="https://doi.org/10.18848/2327-7882/CGP/v23i04/147-168">doi:10.18848/2327-7882/CGP/v23i04/147-168</a>. Scopus-indexed</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2025</span>
-      <p class="ti">Negation in Mising</p>
-      <p class="venue">Himalayan Linguistics, 24(2)</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2025</span>
-      <p class="ti">Preserving the past: A digital archive of the &Eacute;jug Tapung, an extinct wind instrument of the Misings of Northeast India</p>
-      <p class="venue">Proceedings of the 7th International Conference on Language, Society, and Culture in Asian Contexts (LSCAC 2024), 165&#8211;171. ISBN 978-604-4997-48-3</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2023</span>
-      <p class="ti">Annotated bibliographies of twelve books on translation</p>
-      <p class="venue">National Translation Mission (NTM), Central Institute of Indian Languages, Mysore</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2022</span>
-      <p class="ti">A linguistic analysis of the Abangs of the Misings</p>
-      <p class="venue">Abhibyakti, VIII(1), Women&#8217;s Cell, ACTA, Assam</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2022</span>
-      <p class="ti">The study of socio-cultural scenario of eastern and western states of India by analysing stylistic features of matrimonial ads in Assamese and Marathi newspapers <span style="font-weight:400">(J. Navle &amp; N. Doley)</span></p>
-      <p class="venue">Journal of Kolkata Society for Asian Studies, 8(2). ISSN 2454-5694. UGC-CARE</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2021</span>
-      <p class="ti">Typological features: A case study of the Mising language</p>
-      <p class="venue">New Horizons of Multidisciplinary Research</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2021</span>
-      <p class="ti">A stylistic analysis of Taylor Swift&#8217;s Evermore</p>
-      <p class="venue">Journal for Frontline Research, 9</p>
-    </div>
-  </div>
-</section>
-
-<section id="presentations">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">学会発表</p>
-      <h2>口頭発表</h2>
-    </div>
-    <div class="pub">
-      <span class="yr">2026</span>
-      <p class="ti">Beyond the Lexicon: Syntactic Iconicity in Mising</p>
-      <p class="venue">Paris Conference on Arts &amp; Humanities (PCAH2026), Sorbonne University, Paris, France, 15&#8211;19 June</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2025</span>
-      <p class="ti">Case Marking in Pagro Mising</p>
-      <p class="venue">National Seminar on India as a Linguistic Area (ILAESFALF-2025), Centre for Linguistics, JNU, Delhi, with CIIL Mysuru &amp; Asian Literary Society, 4&#8211;6 March</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2025</span>
-      <p class="ti">Assessing the Sociolinguistic Vitality of Mising: A Focus on the Pagro Variety in Dhemaji, Assam</p>
-      <p class="venue">13th North East India Linguistics Society (NEILS 13), Nagaland University, Kohima, 6&#8211;8 February</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2024</span>
-      <p class="ti">Preserving the Past: A Digital Archive of the &Eacute;jug Tapung, an Extinct Wind Instrument of the Misings of Northeast India</p>
-      <p class="venue">7th International Conference on Language, Society and Culture in Asian Contexts (LSCAC 2024), Hue, Vietnam, 22&#8211;24 November</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2024</span>
-      <p class="ti">Exploring Prefix Diversity: A Comparative Analysis of the Tani Languages, Emphasizing Usage in Nominal Categorial Prefixes</p>
-      <p class="venue">15th Asian Conference on Arts &amp; Humanities (ACAH2024), IAFOR, Tokyo, Japan, 23&#8211;27 May</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2024</span>
-      <p class="ti">Negation in Mising</p>
-      <p class="venue">4th International Conference of the Tibeto-Burman Linguistics Association of North-East India (ICTiBLANEI-4), EFLU Shillong, 7&#8211;9 February</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2023</span>
-      <p class="ti">Compound Verb Construction in Mising</p>
-      <p class="venue">ATHENA-2023: Culture, Society, and Politics &#8212; Exploring Northeast India through the Lenses of Social Sciences and Humanities</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2021</span>
-      <p class="ti">Understanding Primary and Secondary Discourse from a Researcher&#8217;s Perspective</p>
-      <p class="venue">International Multidisciplinary Conference (MDRC 2.0), Government College Tripunithura, 9 October</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2021</span>
-      <p class="ti">A:bang of the Misings</p>
-      <p class="venue">International Virtual Conference on Disciplinary, Interdisciplinary and Multidisciplinary Research</p>
-    </div>
-  </div>
-</section>
-
-<section id="awards">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">受賞・助成</p>
-      <h2>受賞歴・研究助成</h2>
-    </div>
-    <div class="pub">
-      <span class="yr">2026</span>
-      <p class="ti">ICSSR渡航助成（インド社会科学研究評議会）</p>
-      <p class="venue">IAFOR第5回パリ人文学会議（PCAH2026、フランス・パリ）での研究発表のため</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2024&#8211;2026</span>
-      <p class="ti">シニア・リサーチ・フェロー（インド大学助成委員会 UGC）</p>
-      <p class="venue">研究助成、2024年2月–2026年8月</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2022&#8211;2024</span>
-      <p class="ti">ジュニア・リサーチ・フェロー（インド大学助成委員会 UGC）</p>
-      <p class="venue">研究助成、2022年2月–2024年2月</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2024</span>
-      <p class="ti">MAC渡航助成（ミシン自治評議会）</p>
-      <p class="venue">第7回アジア文脈における言語・社会・文化国際会議（LSCAC 2024、ベトナム・フエ）での研究発表のため</p>
-    </div>
-    <div class="pub">
-      <span class="yr">2014</span>
-      <p class="ti">アヌンドラム・バルーア賞</p>
-      <p class="venue">アッサム州中等教育委員会、2014年</p>
-    </div>
-  </div>
-</section>
-
-<section id="teaching">
-  <div class="wrap">
-    <div class="sec-head">
-      <p class="eyebrow">教育・フィールドワーク</p>
-      <h2>教室で、川辺で</h2>
-    </div>
-    <div class="tf-grid">
-      <div>
-        <h3 style="font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:1.3rem;margin-bottom:12px">教育経験</h3>
-        <ul>
-          <li>「言語学入門」「対照言語学入門」<small>ジャワハルラール・ネルー大学 学部課程、2023年</small></li>
-          <li>「言語学入門」<small>ムルコン・セレク・カレッジ（アッサム州デマジ県ジョナイ）、2022年</small></li>
-        </ul>
+    <div class="sec-head"><h2>研究</h2><span class="mono">三つの柱</span></div>
+    <div class="cards">
+      <div class="card">
+        <div class="imgbox fit">
+          <div class="slotlabel"><strong>images/research-1.jpg</strong></div>
+          <img src="images/research-1.jpg" alt="A loom with freshly woven Mising textiles, Dhemaji" onerror="this.setAttribute('data-missing','')">
+        </div>
+        <div class="cap"><small>言語記録</small><h3>パグロ・ミシン語の文法</h3></div>
       </div>
-      <div>
-        <h3 style="font-family:'Cormorant Garamond','Noto Serif JP',serif;font-size:1.3rem;margin-bottom:12px">研修・フィールドワーク</h3>
-        <ul>
-          <li>パグロ・ミシン語の博士研究フィールドワーク<small>アッサム州デマジ県</small></li>
-          <li>SPPEL言語記録サマースクール<small>インド諸言語中央研究所（CIIL）マイソール、2022年</small></li>
-          <li>国家翻訳ミッション研修<small>インド諸言語中央研究所（CIIL）マイソール、2023年</small></li>
-        </ul>
+      <div class="card">
+        <div class="imgbox fit">
+          <div class="slotlabel"><strong>images/research-2.jpg</strong></div>
+          <img src="images/research-2.jpg" alt="A traditional gourd wind instrument of the Misings" onerror="this.setAttribute('data-missing','')">
+        </div>
+        <div class="cap"><small>類型論</small><h3>表現語と類像性</h3></div>
       </div>
+      <div class="card">
+        <div class="imgbox">
+          <div class="slotlabel"><strong>images/research-3.jpg</strong></div>
+          <img src="images/research-3.jpg" alt="Normoda in Kyoto, Japan — intercultural exchange" onerror="this.setAttribute('data-missing','')">
+        </div>
+        <div class="cap"><small>教育</small><h3>AIを介した異文化学習</h3></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ONE sentence of language, in the language -->
+<div class="gloss">
+  <div class="wrap" style="padding-top:56px;padding-bottom:56px">
+    <div>
+      <p class="gloss-line src">Ajon-a kap&eacute;</p>
+      <p class="gloss-line morph">friend-<span style="font-variant:small-caps">voc</span> how（友-呼格 どう）</p>
+      <p class="gloss-line trans">「やあ友よ、元気ですか？」</p>
+    </div>
+    <aside>ミシン語は、アッサム州とアルナーチャル・プラデーシュ州のブラマプトラ川流域に暮らす共同体で話されています。博士論文では、私の母語であるパグロ変種の文法を記述しました。</aside>
+  </div>
+</div>
+
+<!-- FIELD gallery — images/field-1.jpg … field-5.jpg -->
+<section id="field">
+  <div class="wrap">
+    <div class="sec-head"><h2>写真で見る</h2><span class="mono">フィールド &middot; 舞台 &middot; 共同体</span></div>
+    <div class="gallery">
+      <figure class="imgbox g1"><img src="images/field-1.jpg" alt="Harvesting paddy under a wide sky, Dhemaji"></figure>
+      <figure class="imgbox"><img src="images/field-2.jpg" alt="Mising dancers in traditional dress"></figure>
+      <figure class="imgbox"><img src="images/field-3.jpg" alt="A Donyi-Polo gangging beside the river"></figure>
+      <figure class="imgbox"><img src="images/field-4.jpg" alt="Morning over the paddy fields"></figure>
+      <figure class="imgbox"><img src="images/field-5.jpg" alt="Buffaloes before a chang-ghar stilt house"></figure>
+      <figure class="imgbox"><img src="images/field-6.jpg" alt="A stilt house reflected in the village pond"></figure>
+      <figure class="imgbox"><img src="images/field-7.jpg" alt="Water threading through the rice fields"></figure>
+      <figure class="imgbox"><img src="images/field-8.jpg" alt="Presenting at PCAH2026, Sorbonne University, Paris"></figure>
+      <figure class="imgbox g1"><img src="images/field-9.jpg" alt="Bundling the golden harvest, Dhemaji"></figure>
+      <figure class="imgbox"><img src="images/field-10.jpg" alt="At the IAFOR Paris Conference on Arts and Humanities, Sorbonne University"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- RECORDS: publications & CV, collapsed by default -->
+<section id="records">
+  <div class="wrap">
+    <div class="sec-head"><h2>業績</h2><span class="mono">クリックで展開</span></div>
+    <div class="records">
+
+      <details>
+        <summary>論文・出版物（12）</summary>
+        <div class="item"><span class="yr">2026</span><p class="t">Exploring prefix diversity: A comparative analysis of the Tani languages, emphasizing usage in nominal categorial prefixes</p><p class="v">Himalayan Linguistics, 25(2). <a href="https://doi.org/10.5070/H9.35586">doi:10.5070/H9.35586</a></p></div>
+        <div class="item"><span class="yr">2026</span><p class="t">Language shift and endangerment of Mising, a Tani language in Northeast India (with A. Mittal)</p><p class="v">Journal of the Southeast Asian Linguistic Society, University of Hawai&#8217;i Press. <a href="https://doi.org/10.21313/10524/52553">doi:10.21313/10524/52553</a></p></div>
+        <div class="item"><span class="yr">2026</span><p class="t">The global and the local: Investigating sociolinguistic motivations for code-switching on Instagram in India and Vietnam (with T. M. T. Vu)</p><p class="v">The International Journal of Communication and Linguistic Studies. <a href="https://doi.org/10.18848/2327-7882/CGP/A217">doi:10.18848/2327-7882/CGP/A217</a></p></div>
+        <div class="item"><span class="yr">2026</span><p class="t">Case marking in Mising</p><p class="v">Vaak Manthan (SEL), 11(1), 168&#8211;176</p></div>
+        <div class="item"><span class="yr">2025</span><p class="t">Ambiguity in online newspaper headlines: A cross-cultural analysis of Vietnam and India (T. M. T. Vu &amp; N. Doley)</p><p class="v">The International Journal of Communication and Linguistic Studies, 23(4), 147&#8211;168. <a href="https://doi.org/10.18848/2327-7882/CGP/v23i04/147-168">doi:10.18848/2327-7882/CGP/v23i04/147-168</a></p></div>
+        <div class="item"><span class="yr">2025</span><p class="t">Negation in Mising</p><p class="v">Himalayan Linguistics, 24(2). <a href="https://doi.org/10.5070/H9.47090">doi:10.5070/H9.47090</a></p></div>
+        <div class="item"><span class="yr">2025</span><p class="t">Preserving the past: A digital archive of the &Eacute;jug Tapung, an extinct wind instrument of the Misings of Northeast India</p><p class="v">Proceedings of LSCAC 2024, 165&#8211;171</p></div>
+        <div class="item"><span class="yr">2023</span><p class="t">Annotated bibliographies of twelve books on translation</p><p class="v">National Translation Mission, CIIL Mysore</p></div>
+        <div class="item"><span class="yr">2022</span><p class="t">A linguistic analysis of the Abangs of the Misings</p><p class="v">Abhibyakti, VIII(1)</p></div>
+        <div class="item"><span class="yr">2022</span><p class="t">The study of socio-cultural scenario of eastern and western states of India by analysing stylistic features of matrimonial ads in Assamese and Marathi newspapers (J. Navle &amp; N. Doley)</p><p class="v">Journal of Kolkata Society for Asian Studies, 8(2)</p></div>
+        <div class="item"><span class="yr">2021</span><p class="t">Typological features: A case study of the Mising language</p><p class="v">New Horizons of Multidisciplinary Research</p></div>
+        <div class="item"><span class="yr">2021</span><p class="t">A stylistic analysis of Taylor Swift&#8217;s Evermore</p><p class="v">Journal for Frontline Research, 9</p></div>
+      </details>
+
+      <details>
+        <summary>学会発表（9）</summary>
+        <div class="item"><span class="yr">2026</span><p class="t">Beyond the Lexicon: Syntactic Iconicity in Mising</p><p class="v">PCAH2026, Sorbonne University, Paris</p></div>
+        <div class="item"><span class="yr">2025</span><p class="t">Case Marking in Pagro Mising</p><p class="v">ILAESFALF-2025, JNU, Delhi</p></div>
+        <div class="item"><span class="yr">2025</span><p class="t">Assessing the Sociolinguistic Vitality of Mising: A Focus on the Pagro Variety in Dhemaji, Assam</p><p class="v">NEILS 13, Nagaland University, Kohima</p></div>
+        <div class="item"><span class="yr">2024</span><p class="t">Preserving the Past: A Digital Archive of the &Eacute;jug Tapung</p><p class="v">LSCAC 2024, Hue, Vietnam</p></div>
+        <div class="item"><span class="yr">2024</span><p class="t">Exploring Prefix Diversity: A Comparative Analysis of the Tani Languages</p><p class="v">ACAH2024, IAFOR, Tokyo</p></div>
+        <div class="item"><span class="yr">2024</span><p class="t">Negation in Mising</p><p class="v">ICTiBLANEI-4, EFLU Shillong</p></div>
+        <div class="item"><span class="yr">2023</span><p class="t">Compound Verb Construction in Mising</p><p class="v">ATHENA-2023</p></div>
+        <div class="item"><span class="yr">2021</span><p class="t">Understanding Primary and Secondary Discourse from a Researcher&#8217;s Perspective</p><p class="v">MDRC 2.0, Government College Tripunithura</p></div>
+        <div class="item"><span class="yr">2021</span><p class="t">A:bang of the Misings</p><p class="v">Intl. Virtual Conference on Disciplinary, Interdisciplinary and Multidisciplinary Research</p></div>
+      </details>
+
+      <details>
+        <summary>受賞・研究助成（5）</summary>
+        <div class="item"><span class="yr">2026</span><p class="t">ICSSR travel grant</p><p class="v">Indian Council of Social Science Research — PCAH2026, Paris</p></div>
+        <div class="item"><span class="yr">2024&#8211;26</span><p class="t">Senior Research Fellow</p><p class="v">University Grants Commission of India</p></div>
+        <div class="item"><span class="yr">2022&#8211;24</span><p class="t">Junior Research Fellow</p><p class="v">University Grants Commission of India</p></div>
+        <div class="item"><span class="yr">2024</span><p class="t">MAC travel grant</p><p class="v">Mising Autonomous Council — LSCAC 2024, Hue</p></div>
+        <div class="item"><span class="yr">2014</span><p class="t">Anundoram Barooah Award</p><p class="v">Secondary Education Board of Assam</p></div>
+      </details>
+
+      <details>
+        <summary>教育・研修</summary>
+        <div class="item"><span class="yr">2023</span><p class="t">Introduction to Linguistics · Languages in Contrast</p><p class="v">Jawaharlal Nehru University, undergraduate</p></div>
+        <div class="item"><span class="yr">2022</span><p class="t">Introduction to Linguistics</p><p class="v">Murkong Selek College, Jonai, Dhemaji</p></div>
+        <div class="item"><span class="yr">2023</span><p class="t">National Translation Mission training</p><p class="v">CIIL, Mysore</p></div>
+        <div class="item"><span class="yr">2022</span><p class="t">SPPEL Summer School in Language Documentation</p><p class="v">CIIL, Mysore</p></div>
+      </details>
+
     </div>
   </div>
 </section>
 
 <footer id="contact">
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <p class="eyebrow" style="color:#C9942A">連絡先</p>
-        <h2>タニ諸語について語り合いましょう</h2>
-        <p style="margin-top:14px;max-width:30em">共同研究、フェローシップの受け入れ、言語記録プロジェクト、そしてミシン語に関するあらゆるお問い合わせを歓迎します。</p>
-      </div>
-      <div style="align-self:end">
-        <p>✉ <a href="mailto:normod13_llh@jnu.ac.in">normod13_llh@jnu.ac.in</a></p>
-        <p style="margin-top:8px">⟶ <a href="https://orcid.org/0009-0003-3425-2775">ORCID</a> · <a href="https://www.scopus.com/authid/detail.uri?authorId=60396776200">Scopus</a></p>
-      </div>
-    </div>
-    <div class="foot-meta">
-      <span>© 2026 Normoda Doley</span>
-      <span>Aying!（アイン）· ミシン語への想いを込めて</span>
-    </div>
+    <p class="mono" style="font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px">連絡先</p>
+    <h2 style="font-family:'Cormorant Garamond','Noto Serif JP',serif">タニ諸語について語り合いましょう</h2>
+    <p style="margin-top:18px">✉ <a href="mailto:normod13_llh@jnu.ac.in">normod13_llh@jnu.ac.in</a> &nbsp;·&nbsp; <a href="https://orcid.org/0009-0003-3425-2775">ORCID</a> &nbsp;·&nbsp; <a href="https://www.scopus.com/authid/detail.uri?authorId=60396776200">Scopus</a></p>
+    <div class="foot-meta"><span>© 2026 Normoda Doley</span><span>Aying!（アイン）· ミシン語への想いを込めて</span></div>
   </div>
 </footer>
 
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>{nav.classList.toggle('scrolled',scrollY>60)},{passive:true});
+</script>
 </body>
 </html>
